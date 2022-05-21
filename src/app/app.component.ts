@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import data from './data';
+import { IProduct } from './models/Products';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
+
+
+  productList: IProduct[] = data;
+
+  onHandleAdd(product:any){
+    console.log(product);
+    this.productList.push(product)
+    
+  }
 }
