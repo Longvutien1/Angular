@@ -1,0 +1,37 @@
+/* @media(max-width:768px){
+
+    .header{
+        position: relative;
+    }
+    .header .navbar{
+        position: absolute;
+        top:70%; 
+        margin: auto;
+        left:0; right:0;
+        background:#fff;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: all ease-in-out 0.25s;
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        top:99%; 
+        transition: all ease-in-out 0.25s;
+    }
+
+    .header .navbar ul li{
+        display: block;
+        font-size: 15px;
+        margin:0;
+        padding:1rem 1rem;
+    }
+    #menu-btn{
+        display: initial;
+    }
+
+    #menu-btn .fa-times{
+        transform:rotate(180deg);
+    }
+ 
+
+} */

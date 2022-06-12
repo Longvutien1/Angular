@@ -1,0 +1,25 @@
+<p>add-category works!</p>
+
+
+{{category | json}}
+<!-- <form action="" (ngSubmit)="onSubmit()" #formAdd="ngForm">
+    <input type="text" placeholder="Name" name="name" [(ngModel)]="product.name">
+    <input type="number" name="price" placeholder="Price" [(ngModel)]="product.price">
+    <button>Add</button>
+</form> -->
+
+<form nz-form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+    <nz-form-item >
+      <nz-form-label [nzSpan]="2" nzFor="name">Category Name</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="name" type="text" id="name" [(ngModel)]="category.name">
+      </nz-form-control>
+    </nz-form-item >
+
+
+      <nz-form-item nz-row class="register-area">
+        <nz-form-control [nzSpan]="14" [nzOffset]="1">
+          <button nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+  </form>

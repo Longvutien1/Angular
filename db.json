@@ -1,0 +1,151 @@
+{
+  "products": [
+    {
+      "name": "Vũ Tiến Long",
+      "price": 1111,
+      "id": 4
+    },
+    {
+      "name": "long chanh thôn 112",
+      "price": 1112,
+      "id": 5
+    },
+    {
+      "name": "Nguyễn Văn Hữu",
+      "price": 1111,
+      "id": 7
+    },
+    {
+      "name": "sản phẩm mới nahasat",
+      "price": 12122,
+      "status": true,
+      "image": "C:\\fakepath\\Rectangle 32.jpg",
+      "desc": "1111",
+      "id": 8
+    },
+    {
+      "name": "Vũ Tiến Long",
+      "price": 0,
+      "status": true,
+      "image": "",
+      "desc": "",
+      "id": 10
+    },
+    {
+      "name": "r34343",
+      "price": 690,
+      "status": true,
+      "image": "",
+      "desc": "",
+      "id": 12
+    }
+  ],
+  "users": [
+    {
+      "email": "longvtph14046@fpt.edu.vn",
+      "password": "$2a$10$kHaNXNtdaRGmHrUjfOJelusq5gsaWs8Rtwy9fP1lpSKOns3L6ig5G",
+      "username": "longvt",
+      "role": 0,
+      "id": 1
+    },
+    {
+      "email": "tllong20002@gmail.com",
+      "password": "$2a$10$RCJwJRs.FUrHu1/Rag4zPORVuIgpO7/DUB2lgZ00S9RQWXYUEgrL2",
+      "username": "long chanh thôn",
+      "role": 0,
+      "id": 2
+    },
+    {
+      "email": "tllong2000112@gmail.com",
+      "password": "$2a$10$kFKFe2sc0naC7ulkbNz.Au3acEHLEWHVQP5yj.YTIe0mq1N74yPze",
+      "username": "datlt1212",
+      "role": 0,
+      "id": 3
+    },
+    {
+      "email": "longvtph140111146@fpt.edu.vn",
+      "password": "$2a$10$rSTlkHdMuY6d4iY2koUEeOfRN604IkTEC0FwGW4vFhzCWLOgdo5Di",
+      "username": "longvt14046",
+      "role": 0,
+      "id": 4
+    },
+    {
+      "email": "longvtph14011146@fpt.edu.vn",
+      "password": "$2a$10$9n/G5tdD.Zxn83HB9ZM/.O1KKlhl/Qu/tAsT67VHMBLEzw1nNwvuC",
+      "username": "longvt14046",
+      "role": 0,
+      "id": 5
+    },
+    {
+      "email": "longvt@gmail.com",
+      "password": "$2a$10$bTYGcQbt5AbZyTq80xzcwuUOCkV6DsxgHTfKG8EKmA4aMfrgPBXZy",
+      "username": "datlt1212",
+      "role": 0,
+      "id": 6
+    },
+    {
+      "email": "longvtph14046@fpt.edu.vngrggrg",
+      "password": "$2a$10$uywJn9jzQlqaUeDyw5hIdO3YU7at7Iv1Npm.xJO4UY3bRGjhwjexi",
+      "username": "longvt14046",
+      "role": 0,
+      "id": 7
+    },
+    {
+      "email": "longvtph1404feeeeg6@fpt.edu.vn",
+      "password": "$2a$10$2orcbVyH.MzyR38BHqMVauGTrKBwuid.EDi5VrJShpwbpcuvsPtA.",
+      "username": "ph140481",
+      "role": 0,
+      "id": 8
+    },
+    {
+      "email": "longvt@gmail.com.vn",
+      "password": "$2a$10$Wyw.3bSMeRHfpzXMiywL4OmjFpae/pNXy4Mld02ioWGlq.E4lByYG",
+      "username": "datlt1212",
+      "role": 0,
+      "id": 9
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$6dRMKNgixWZmNP82L8DATuQNlrfnHEsiQB2ToEAfzLKPcG83SaqO6",
+      "username": "admin",
+      "role": 0,
+      "id": 10
+    },
+    {
+      "email": "sangptph17370@fpt.edu.vn",
+      "password": "$2a$10$5N8ZicojbTP27FWDBhi9seJKdlyLcZWSaVTLWRaGy3eEO0gMhcFcO",
+      "username": "longvt14046",
+      "role": 0,
+      "id": 11
+    },
+    {
+      "email": "loanbnph17875@fpt.edu.vn",
+      "password": "$2a$10$x0ZZFboWnrBrzst2qX/1DuXEY6Va65xGglC9QD6eKnV4hMWomx1Y.",
+      "username": "longvt",
+      "role": 0,
+      "id": 12
+    }
+  ],
+  "categories": [
+    {
+      "name": "Loại 1",
+      "id": 1
+    },
+    {
+      "name": "Loại 2",
+      "id": 2
+    },
+    {
+      "name": "Loại 3",
+      "id": 5
+    },
+    {
+      "name": "Nguyễn Văn Hữu",
+      "id": 7
+    },
+    {
+      "name": "Nguyễn Văn Hữu 2",
+      "id": 8
+    }
+  ]
+}

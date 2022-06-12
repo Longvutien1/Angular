@@ -1,0 +1,20 @@
+<!-- login form section starts  -->
+
+<section class="login">
+
+    <form  (ngSubmit)="onSubmit()" #formAdd="ngForm">
+        <h3>login now</h3>
+        <input type="email" name="email" placeholder="enter your email" [(ngModel)]="user.email" id="" class="box">
+        <input type="password" name="password" placeholder="enter your password" [(ngModel)]="user.password" id="" class="box">
+        <div class="remember">
+            <input type="checkbox" name="" id="remember-me">
+            <label for="remember-me"> remember me </label>
+        </div>
+        <input type="submit" value="login now" class="btn">
+        <p>don't have an account?</p>
+        <a href="register" class="btn link">register now</a>
+    </form>
+
+</section>
+
+<!-- login form section ends  -->

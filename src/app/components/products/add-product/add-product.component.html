@@ -1,8 +1,52 @@
 <p>add-product works!</p>
 
 {{product | json}}
-<form action="" (ngSubmit)="onSubmit()" #formAdd="ngForm">
+<!-- <form action="" (ngSubmit)="onSubmit()" #formAdd="ngForm">
     <input type="text" placeholder="Name" name="name" [(ngModel)]="product.name">
     <input type="number" name="price" placeholder="Price" [(ngModel)]="product.price">
     <button>Add</button>
-</form>
+</form> -->
+
+<form nz-form (ngSubmit)="onSubmit()" #formAdd="ngForm">
+    <nz-form-item >
+      <nz-form-label [nzSpan]="1" nzFor="name">Product Name</nz-form-label>
+      <nz-form-control [nzSpan]="14">
+        <input nz-input name="name" type="text" id="name" #name="ngModel" required minlength="6" [(ngModel)]="product.name">
+
+        <!-- <p [hidden]="name.valid || name.pristine">Name required</p> -->
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+            <div *ngIf="name.errors?.['required']">Name is required</div>
+            <div *ngIf="name.errors?.['minlength']">minlength > 6</div>
+        </div>
+      </nz-form-control>
+    </nz-form-item >
+
+    <nz-form-item>
+        <nz-form-label [nzSpan]="1" nzFor="price">Price</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <input nz-input name="price" type="number"  id="price" #price="ngModel" required [(ngModel)]="product.price">
+          <p [hidden]="price.valid || price.pristine">Price required</p>
+        </nz-form-control>
+      </nz-form-item >
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="1" nzFor="img">Image</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <input nz-input name="img" type="file" id="img" [(ngModel)]="product.image">
+        </nz-form-control>
+      </nz-form-item >
+
+      <nz-form-item>
+        <nz-form-label [nzSpan]="1" nzFor="desc">Descript</nz-form-label>
+        <nz-form-control [nzSpan]="14">
+          <input nz-input name="desc" type="text" id="desc" [(ngModel)]="product.desc">
+        </nz-form-control>
+      </nz-form-item >
+
+      <nz-form-item nz-row class="register-area">
+        <nz-form-control [nzSpan]="14" [nzOffset]="1">
+          <button [disabled]="!formAdd.valid" nz-button nzType="primary">Submit</button>
+        </nz-form-control>
+      </nz-form-item>
+  </form>

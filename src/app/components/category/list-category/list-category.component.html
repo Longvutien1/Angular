@@ -1,0 +1,24 @@
+<p>list-category works!</p>
+
+
+<nz-table #basicTable [nzData]="categories">
+    <thead>
+      <tr>
+        <th>STT</th>
+        <th>NAME</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of basicTable.data; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{data.name}}</td>
+        <td>
+          <a routerLink="/admin/category/add/{{data.id}}">Edit</a>
+          <!-- <a [routerLink]="['add',data.id]">Edit</a> -->
+          <nz-divider nzType="vertical"></nz-divider>
+          <a (click)="remove(data.id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
