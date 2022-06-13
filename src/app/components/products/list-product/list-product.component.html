@@ -8,12 +8,13 @@
 
 
 <div *ngIf="isStatus">
-  <nz-table #basicTable [nzData]="products">
+  <nz-table #basicTable [nzPageSize]="3" [nzData]="products">
     <thead>
       <tr>
         <th>STT</th>
         <th>NAME</th>
-        <th>PRICE</th>
+        <th>Desc</th>
+        <th>Category</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -21,12 +22,14 @@
       <tr *ngFor="let data of basicTable.data; let i = index">
         <td>{{i + 1}}</td>
         <td>{{data.name}}</td>
-        <td>{{data.price}}</td>
+        <td style="width: 300px;">{{data.desc}}</td>
+        <td>{{data.category}}</td>
         <td>
-          <a routerLink="/admin/product/add/{{data.id}}">Edit</a>
+          <a routerLink="/admin/product/add/{{data.id}}" nz-button nzType="primary">Edit</a>
           <!-- <a [routerLink]="['add',data.id]">Edit</a> -->
           <nz-divider nzType="vertical"></nz-divider>
-          <a (click)="remove(data.id)">Delete</a>
+          <!-- <button  >Primary</button> -->
+          <a (click)="remove(data.id)" nz-button nzType="primary" nzDanger>Delete</a>
         </td>
       </tr>
     </tbody>

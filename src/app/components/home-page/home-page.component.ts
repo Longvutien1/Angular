@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IProduct } from 'src/app/models/Products';
+import { ProductService } from 'src/app/service/product.service';
 
 
 @Component({
@@ -10,11 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
    username:string = JSON.parse(String(localStorage?.getItem("user"))).user.username;
-  constructor() { }
+   products! : IProduct[] ;
+  constructor(
+    private productService: ProductService
+  ) { }
   
   ngOnInit(): void {
+    this.showProducts();
     console.log(JSON.parse(String(localStorage?.getItem("user"))).user.username);
     
+  }
+
+  showProducts() {
+    this.productService.getProductList().subscribe(data => {
+      this.products = data
+    })
   }
   
 }

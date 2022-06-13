@@ -9,43 +9,69 @@
 
 <form nz-form (ngSubmit)="onSubmit()" #formAdd="ngForm">
     <nz-form-item >
-      <nz-form-label [nzSpan]="1" nzFor="name">Product Name</nz-form-label>
+      <nz-form-label [nzSpan]="2" nzFor="name">Title</nz-form-label>
       <nz-form-control [nzSpan]="14">
         <input nz-input name="name" type="text" id="name" #name="ngModel" required minlength="6" [(ngModel)]="product.name">
 
         <!-- <p [hidden]="name.valid || name.pristine">Name required</p> -->
 
         <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
-            <div *ngIf="name.errors?.['required']">Name is required</div>
-            <div *ngIf="name.errors?.['minlength']">minlength > 6</div>
+            <div *ngIf="name.errors?.['required']" style="color: red;">Name is required</div>
+            <div *ngIf="name.errors?.['minlength']" style="color: red;">minlength > 6</div>
         </div>
       </nz-form-control>
     </nz-form-item >
 
-    <nz-form-item>
+      <!-- <nz-form-item>
         <nz-form-label [nzSpan]="1" nzFor="price">Price</nz-form-label>
         <nz-form-control [nzSpan]="14">
           <input nz-input name="price" type="number"  id="price" #price="ngModel" required [(ngModel)]="product.price">
           <p [hidden]="price.valid || price.pristine">Price required</p>
         </nz-form-control>
-      </nz-form-item >
+      </nz-form-item > -->
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="1" nzFor="img">Image</nz-form-label>
+        <nz-form-label [nzSpan]="2" nzFor="img">Image</nz-form-label>
         <nz-form-control [nzSpan]="14">
           <input nz-input name="img" type="file" id="img" [(ngModel)]="product.image">
         </nz-form-control>
       </nz-form-item >
 
       <nz-form-item>
-        <nz-form-label [nzSpan]="1" nzFor="desc">Descript</nz-form-label>
+        <nz-form-label [nzSpan]="2" nzFor="desc">Descript</nz-form-label>
         <nz-form-control [nzSpan]="14">
-          <input nz-input name="desc" type="text" id="desc" [(ngModel)]="product.desc">
+          <input nz-input name="desc" type="text" #desc="ngModel" required minlength="6" id="desc" [(ngModel)]="product.desc">
+
+          <div *ngIf="desc.invalid && (desc.dirty || desc.touched)" class="alert">
+            <div *ngIf="desc.errors?.['required']" style="color: red;">Desc is required</div>
+            <div *ngIf="desc.errors?.['minlength']" style="color: red;">minlength > 6</div>
+        </div>
         </nz-form-control>
       </nz-form-item >
 
-      <nz-form-item nz-row class="register-area">
-        <nz-form-control [nzSpan]="14" [nzOffset]="1">
+     
+      <nz-form-item >
+        <nz-form-label [nzSpan]="2" nzFor="desc">Category</nz-form-label>
+        <nz-form-control [nzSpan]="14" >
+          <nz-table>
+            <!-- <tbody> -->
+              <nz-select  ngModel="lucy" name="category" [(ngModel)]="product.category">
+              <tr *ngFor="let data of categories; let i = index">       
+                  <nz-option  nzValue="{{data.name}}" nzLabel="{{data.name}}"></nz-option>
+                  <!-- <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+                  <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option> -->
+              </tr>
+            </nz-select>
+            <!-- </tbody> -->
+          </nz-table>
+          
+        </nz-form-control>
+      </nz-form-item >
+       
+     
+
+      <nz-form-item nz-row  class="register-area">
+        <nz-form-control [nzSpan]="14" [nzOffset]="2">
           <button [disabled]="!formAdd.valid" nz-button nzType="primary">Submit</button>
         </nz-form-control>
       </nz-form-item>

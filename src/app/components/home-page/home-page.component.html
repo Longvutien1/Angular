@@ -33,13 +33,7 @@
                 <p class=" text-[18px] md:text-[20px] font-bold">Making a design system from scratch</p>
                 <div class="flex justify-between">
                     <p class="my-[0.6rem] md:mt-[1.4rem] md:mb-[0.8rem] text-[14px]">
-                        <span>
-                            <span id="h"></span>
-                            <script type="text/javascript">
-                                n = new Date(); if (n.getTimezoneOffset() == 0) t = n.getTime() + (7 * 60 * 60 * 1000); else t = n.getTime(); n.setTime(t); var dn = new Array("Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"); d = n.getDay(); m = n.getMonth() + 1; y = n.getFullYear()
-                                document.write(dn[d] + ", " + (n.getDate() < 10 ? "0" : "") + n.getDate() + "/" + (m < 10 ? "0" : "") + m + "/" + y)
-                            </script>
-                        </span>
+                        <span>12 Feb 2020</span>
                         <span class="px-2">|</span>
                         <span>Design, Pattern</span>
                     </p>
@@ -60,13 +54,7 @@
                 <p class="text-[18px] font-bold">Making a design system from scratch</p>
                 <div class="flex justify-between">
                     <p class="my-[0.6rem] md:mt-[1.4rem] md:mb-[0.8rem] text-[14px]">
-                        <span>
-                            <span id="h"></span>
-                            <script type="text/javascript">
-                                n = new Date(); if (n.getTimezoneOffset() == 0) t = n.getTime() + (7 * 60 * 60 * 1000); else t = n.getTime(); n.setTime(t); var dn = new Array("Chủ nhật", "Thứ 2", "Thứ 3", "Thứ 4", "Thứ 5", "Thứ 6", "Thứ 7"); d = n.getDay(); m = n.getMonth() + 1; y = n.getFullYear()
-                                document.write(dn[d] + ", " + (n.getDate() < 10 ? "0" : "") + n.getDate() + "/" + (m < 10 ? "0" : "") + m + "/" + y)
-                            </script>
-                        </span>
+                        <span>12 Feb 2020</span>
                         <span class="px-2">|</span>
                         <span>Design, Pattern</span>
                     </p>
@@ -83,33 +71,41 @@
 
 <!-- end  recent-posts-->
 
-<section class="recent-posts w-[90%]  md:w-[60.6%]  m-auto  px-[7.8%] pt-[1.3%] pb-[2%]">
+<section class="featured-works w-[90%]  md:w-[60.6%]  m-auto  px-[7.8%] pt-[1.3%] pb-[2%]">
     <div class="title my-4  md:mb-3 md:mt-1 ">
         <p class="font-semibold text-[18px] text-center md:text-left">Featured works</p>
     </div>
 
     <div class="">
-        <div class="bg-white  md:flex md:justify-between md:gap-3 mt-7 pb-5 border-b  border-b-gray-300">
-            <div class="image w-[400px] mb-2 md:mb-0">
-                <a href=""><img src="https://picsum.photos/400/300" alt=""></a>
-            </div>
-            <div class="content ">
-                <p class="text-[20px]  font-bold md:leading-3 ">Making a design system from scratch</p>
-                <div class="flex justify-between">
-                    <p class="mt-[1rem] md:mt-[1.6rem] mb-[0.8rem]">
-                        <span class="bg-black text-white rounded-full px-2 mr-4 inline-block">2020</span>
-                        <span>Dashboard</span>
-                    </p>
+     
+          <nz-table #basicTable  [nzData]="products" [nzPageSize]="3">
+           
+            <tbody>
+                <!-- <tr *ngFor="let data of products; let i = index" > -->
+                <tr *ngFor="let data of basicTable.data; let i = index">
+                    <div   class="bg-white  md:grid md:grid-cols-[200px,auto] md:gap-3 mt-6 pb-5 border-b  border-b-gray-300">
+                        <div class="image  mb-2 md:mb-0">
+                            <a href="detailProduct/{{data.id}}"><img src="https://picsum.photos/400/280" class="rounded" alt=""></a>
+                        </div>
+                        <div class="content ">
+                            <a href="detailProduct/{{data.id}}"><p class="text-[20px]  font-bold md:leading-3 ">{{data.name}}</p></a>
+                            <div class="flex justify-between">
+                                <p class="mt-[1rem] md:mt-[1.6rem] mb-[0.8rem]">
+                                    <span class="bg-black text-white rounded-full px-2 mr-4 inline-block">2020</span>
+                                    <span>Dashboard</span>
+                                </p>
+            
+                            </div>
+                            <p class="text-[13px]">{{data.desc}}
+                            </p>
+            
+                        </div>
+                    </div>
+                  </tr>
+            </tbody>
+          </nz-table>
 
-                </div>
-                <p class="text-[13px]">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
-                    Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-                </p>
-
-            </div>
-        </div>
-
-        <div class="bg-white  md:flex md:justify-between md:gap-3 mt-7 pb-5 border-b  border-b-gray-300">
+        <!-- <div class="bg-white  md:flex md:justify-between md:gap-3 mt-7 pb-5 border-b  border-b-gray-300">
             <div class="image w-[400px] ">
                 <a href=""><img src="https://picsum.photos/400/300" alt=""></a>
             </div>
@@ -147,11 +143,11 @@
                 </p>
 
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 
-<!-- end recent posts -->
+<!-- end featured-works posts -->
 
 <app-footer></app-footer>
 

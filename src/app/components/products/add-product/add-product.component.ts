@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IProduct } from 'src/app/models/Products';
+import { ICategory, IProduct } from 'src/app/models/Products';
+import { CategoryService } from 'src/app/service/category.service';
 import { ProductService } from 'src/app/service/product.service';
 
 
@@ -11,6 +12,7 @@ import { ProductService } from 'src/app/service/product.service';
 })
 export class AddProductComponent implements OnInit {
   @Output() createProduct = new EventEmitter<{ name: string, price: number }>();
+  categories! : ICategory[];
   product:IProduct = {
     name: "",
     price: 0,
@@ -20,6 +22,7 @@ export class AddProductComponent implements OnInit {
   }
   constructor(
     private productService: ProductService,
+    private categoryService: CategoryService,
     private route:Router,
     private activatedRoute: ActivatedRoute
     ) { }
@@ -32,6 +35,10 @@ export class AddProductComponent implements OnInit {
     // nếu có id thì call service get product để thấy tt trả về form
     this.productService.getProduct(id).subscribe((data) => {
         this.product = data
+    })
+    
+    this.categoryService.getCategoryList().subscribe((data) => {
+      this.categories = data
     })
   }
   onSubmit(){
