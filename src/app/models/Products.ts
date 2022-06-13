@@ -4,6 +4,7 @@ export interface IProduct{
     price?:number,
     status?: boolean,
     image?: string,
+    category?: string,
     desc: string
 }
 

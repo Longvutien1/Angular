@@ -4,13 +4,24 @@
 
     <form  (ngSubmit)="onSubmit()" #formAdd="ngForm">
         <h3>login now</h3>
-        <input type="email" name="email" placeholder="enter your email" [(ngModel)]="user.email" id="" class="box">
-        <input type="password" name="password" placeholder="enter your password" [(ngModel)]="user.password" id="" class="box">
+
+        <input type="email" name="email" placeholder="enter your email" #email="ngModel" required minlength="6" [(ngModel)]="user.email" id="" class="box">
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"  class="alert">
+            <div *ngIf="email.errors?.['required']" style="color: red;">Email is required</div>
+            <div *ngIf="email.errors?.['minlength']" style="color: red;">Minlength > 6</div>
+        </div>
+
+
+        <input type="password" name="password" placeholder="enter your password" #password="ngModel" required minlength="6" [(ngModel)]="user.password" id="" class="box">
+        <div *ngIf="password.invalid && (password.dirty || password.touched)"  class="alert">
+            <div *ngIf="password.errors?.['required']" style="color: red;">Password is required</div>
+            <div *ngIf="password.errors?.['minlength']" style="color: red;">Minlength > 6</div>
+        </div>
         <div class="remember">
             <input type="checkbox" name="" id="remember-me">
             <label for="remember-me"> remember me </label>
         </div>
-        <input type="submit" value="login now" class="btn">
+        <button [disabled]="!formAdd.valid" nz-button nzType="primary" class="w-full py-4 rounded">Submit</button>
         <p>don't have an account?</p>
         <a href="register" class="btn link">register now</a>
     </form>

@@ -30,7 +30,11 @@ import { ListCategoryComponent } from './components/category/list-category/list-
 import { AddCategoryComponent } from './components/category/add-category/add-category.component';
 import { HeaderComponent } from './components/inc/header/header.component';
 import { FooterComponent } from './components/inc/footer/footer.component';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 // import { UserManagerComponent } from './components/auth/user-manager/user-manager.component';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { BlogComponent } from './components/blog/blog.component';
+import { WorksComponent } from './components/works/works.component';
 registerLocaleData(en);
 
 @NgModule({
@@ -48,6 +52,8 @@ registerLocaleData(en);
     AddCategoryComponent,
     HeaderComponent,
     FooterComponent,
+    BlogComponent,
+    WorksComponent,
     // UserManagerComponent,
     // EditComponent,
   ],
@@ -64,7 +70,9 @@ registerLocaleData(en);
     NzBreadCrumbModule,
     NzDividerModule,
     NzFormModule,
-    NzSelectModule
+    NzSelectModule,
+    NzButtonModule,
+    NzListModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

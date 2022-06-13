@@ -30,7 +30,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    try {
+    
       console.log(this.user);
       // call service userSerive register
         this.userService.register(this.user).subscribe(data => {
@@ -39,12 +39,11 @@ export class RegisterComponent implements OnInit {
         // chuyển hướng tới login
         this.route.navigateByUrl("/login");
         
+      },error=>{
+        alert("Something went wrong")
       })
      
-    } catch (error) {
-      
-      alert("Lỗi rồi");
-    }
+    
   }
   
 }

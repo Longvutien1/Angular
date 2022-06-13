@@ -3,41 +3,68 @@
     {
       "name": "Vũ Tiến Long",
       "price": 1111,
-      "id": 4
+      "id": 4,
+      "desc": "Amet minim mollit no",
+      "category": "Loại 2"
     },
     {
       "name": "long chanh thôn 112",
       "price": 1112,
-      "id": 5
+      "id": 5,
+      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "category": "Loại 3"
     },
     {
       "name": "Nguyễn Văn Hữu",
       "price": 1111,
-      "id": 7
+      "id": 7,
+      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "category": "Loại 1"
     },
     {
-      "name": "sản phẩm mới nahasat",
-      "price": 12122,
-      "status": true,
-      "image": "C:\\fakepath\\Rectangle 32.jpg",
-      "desc": "1111",
-      "id": 8
-    },
-    {
-      "name": "Vũ Tiến Long",
+      "name": "longvt",
       "price": 0,
       "status": true,
       "image": "",
-      "desc": "",
-      "id": 10
+      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "category": "2",
+      "id": 15
     },
     {
-      "name": "r34343",
-      "price": 690,
+      "name": "aaaaa11",
+      "price": 0,
       "status": true,
       "image": "",
-      "desc": "",
-      "id": 12
+      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "category": "Loại 3",
+      "id": 16
+    },
+    {
+      "name": "datlt1212",
+      "price": 0,
+      "status": true,
+      "image": "",
+      "desc": "1121212111111111111111",
+      "category": "Loại 2",
+      "id": 17
+    },
+    {
+      "name": "datlt1212",
+      "price": 0,
+      "status": true,
+      "image": "",
+      "desc": "11111111111",
+      "category": "Loại 2",
+      "id": 18
+    },
+    {
+      "name": "longvt",
+      "price": 0,
+      "status": true,
+      "image": "",
+      "desc": "11111111111",
+      "category": "Loại 1",
+      "id": 19
     }
   ],
   "users": [
@@ -124,6 +151,20 @@
       "username": "longvt",
       "role": 0,
       "id": 12
+    },
+    {
+      "email": "a12vvv@gmail.com",
+      "password": "$2a$10$gkIHZT55Qv4cASBw824P1uI72sA2P4pAcbFx3GPgOkjjy5z2SyE7y",
+      "username": "longvt",
+      "role": 0,
+      "id": 13
+    },
+    {
+      "email": "sang@fpt.edu.vn",
+      "password": "$2a$10$G2AZSfcDgzYrEiiXVyGRbOYp.HweiOy4A5dZ42eHZLRG2NXnkZnny",
+      "username": "fefefefe",
+      "role": 0,
+      "id": 14
     }
   ],
   "categories": [
@@ -140,12 +181,8 @@
       "id": 5
     },
     {
-      "name": "Nguyễn Văn Hữu",
-      "id": 7
-    },
-    {
-      "name": "Nguyễn Văn Hữu 2",
-      "id": 8
+      "name": "Loại 4",
+      "id": 9
     }
   ]
 }
