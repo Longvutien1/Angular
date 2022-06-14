@@ -4,7 +4,7 @@
       "name": "Vũ Tiến Long",
       "price": 1111,
       "id": 4,
-      "desc": "Amet minim mollit no",
+      "desc": "Amet minim mollit no 2",
       "category": "Loại 2"
     },
     {
@@ -65,6 +65,15 @@
       "desc": "11111111111",
       "category": "Loại 1",
       "id": 19
+    },
+    {
+      "name": "Glasses",
+      "price": 0,
+      "status": true,
+      "image": "",
+      "desc": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+      "category": "Loại 2",
+      "id": 20
     }
   ],
   "users": [

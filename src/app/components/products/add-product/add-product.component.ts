@@ -52,12 +52,14 @@ export class AddProductComponent implements OnInit {
       // nếu thành công thì trả về sản phẩm vừa cập nhật xong
       this.productService.updateProduct(this.product).subscribe((data) => {
         console.log(data);
+        alert("Edit successfully !");
          // chuyển hướng route
          this.route.navigateByUrl('admin/product/list')
       })
     }else{
       // call service add product
       this.productService.addProduct(this.product).subscribe(data => {
+        alert("Add successfully !");
         // chuyển hướng route
         this.route.navigateByUrl('admin/product/list')
       })
