@@ -11,7 +11,7 @@ import { ProductService } from 'src/app/service/product.service';
   
 })
 export class HomePageComponent implements OnInit {
-   username:string = JSON.parse(String(localStorage?.getItem("user"))).user.username;
+  //  username:string = JSON.parse(String(localStorage?.getItem("user"))).user.username;
    products! : IProduct[] ;
   constructor(
     private productService: ProductService
@@ -19,7 +19,7 @@ export class HomePageComponent implements OnInit {
   
   ngOnInit(): void {
     this.showProducts();
-    console.log(JSON.parse(String(localStorage?.getItem("user"))).user.username);
+    // console.log(JSON.parse(String(localStorage?.getItem("user"))).user.username);
     
   }
 
