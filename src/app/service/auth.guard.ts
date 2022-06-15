@@ -21,7 +21,7 @@ export class AuthGuard implements CanActivate {
     if (Number(user.user.id) == 10) {
       return true
     }else{
-      return this.route.navigateByUrl('')
+      return this.route.navigate(['/'])
     }
 
   
